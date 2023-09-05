@@ -1,0 +1,11 @@
+@media (max-width: 768px) {
+     h1 {
+          font-size: 16vw;
+     }
+}
+
+@media (max-width: 640px) {
+     .plates {
+       width: 320px;
+     }
+}

@@ -1,0 +1,100 @@
+
+/* XRAY */
+#holdboth{
+  position:relative;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.positionadjust{
+  position:absolute;
+}
+.textstyles{
+  font-size:48px;
+  padding:20px;
+  font-weight:bold;
+  display: flex;
+  align-items: center;
+  width: inherit;
+  justify-content: center;
+}
+.texttop{
+  /* color:#21374d; */
+  /* color:#1fc2f0; */
+  z-index:10;
+  width: inherit;
+}
+.textbottom{
+  color:lightblue;
+  z-index:1;
+}
+.initclip {
+  clip-path: circle(50px at -100px -100px);
+  background-color: #091318;
+  /* height: inherit;
+  width: inherit; */
+}
+.shine {
+     color: #1fc2f0;
+     display:block;
+     margin:50px;
+     text-align: center;
+     position:relative;
+     font-weight: 800;
+     font-size: 50px;
+     text-align: center;
+     line-height: 110%;
+   
+     /* border: 1px solid red; */
+   }
+
+   .shine span{
+     position: absolute;
+     top: 0;
+     left: 0;
+     /* display: none; */
+     z-index: 100;
+     background-color: #091318;
+   }
+   
+   
+   .cursorHover {
+     width:300px;
+     height:300px;
+     transition: width 0.1s, height  0.1s ease;
+   }
+   
+
+   
+.mstrRevealText {
+  color: #1fc2f0;
+  display:block;
+  position:relative;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 110%;
+  /* border: 1px solid red; */
+}
+
+.mstrRevealText span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* display: none; */
+  z-index: 100;
+  background-color: #030303;
+}
+
+.cursorMstrHover {
+  width:500px;
+  height:500px;
+  transition: width 0.1s, height  0.1s ease;
+}
+
+.shine:hover ~ .cursor {
+  width:150px;
+  height:150px;
+  transition: width 0.3s, height  0.3s ease;
+} 
