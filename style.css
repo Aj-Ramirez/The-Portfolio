@@ -1288,6 +1288,7 @@ a:hover{
   line-height: 80%;
   transition: color 3s ease;
   animation: introAnimation 1.5s ease-out 1s forwards; 
+  color:#1fc2f0;
  }
  #about-title{
   font-size: 12rem;
@@ -1314,7 +1315,7 @@ a:hover{
   justify-content: space-around;
   align-items: center;
   margin: 0 auto;
-  /* margin-left: 100px; */
+  margin-left: 125px;
 }
   .border {
     height: 369px;
@@ -1773,57 +1774,91 @@ a:hover{
       transition-duration: .3s;
       font-size: 2px;
     } */
-    
-    .about-container-parent {
-      display: grid;
-      grid-template-columns: 1fr 0.5fr repeat(2, 1fr);
-      grid-template-rows: repeat(8, 1fr);
-      grid-column-gap: 100px;
-      grid-row-gap: 50px;
-      /* background-color: gray; */
+.about-us-grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
 
-      width: 100vw;
-      height: 150vh;
-      margin-left: 2%;
-      scale: 0.9;
+  height: 90vh;
+  width: 95vw;
+  /* background-color: gray; */
+  }
+      .grid1 { 
+        grid-area: 1 / 1 / 3 / 3; 
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 30px;
+        /* background-color: #101c23; */
       }
-      
-            .about-div1 {
-              grid-area: 1 / 1 / 5 / 2;
-              /* background-color: red; */
-              height: 100%;
-              width: 100%;
+      .grid2 { 
+        grid-area: 1 / 3 / 2 / 4; 
+        /* background-color: orange; */
+      }
+      .grid3 { 
+        grid-area: 1 / 4 / 2 / 5; 
+        /* background-color: green; */
+      }
+      .grid4 { 
+        grid-area: 2 / 3 / 3 / 4; 
+        /* background-color: blue; */
+      }
+      .grid5 { 
+        grid-area: 2 / 4 / 3 / 5; 
+        /* background-color: violet; */
+      }
 
-              display: flex;
-              justify-content: center;
-              align-items: center;
-            }
-      
-            .about-div2 {
-              grid-area: 5 / 1 / 9 / 2;
-              /* background-color: orange; */
-              height: 100%;
-              width: 100%;
-              
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              margin-top: -100px;
-            }
-      
-            .about-div3 {
-              grid-area: 1 / 2 / 6 / 5;
-              background-color: #111c27;
-              border-radius: 20px;
-              padding: 50px;
-              height: 85%;
-              width: 100%;
-            }
-      
-            .about-div4 {
-              grid-area: 6 / 2 / 9 / 5;
-              /* background-color: green; */
-              height: 100%;
-              width: 100%;
-              margin-top: -100px;
-            }
+.blurb{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: transparent;
+
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  transition: transform 0.3s, background 0.5s ease;
+
+  border-radius: 20px;
+  border: none;
+  font-weight: 600;
+  transition-duration: .3s;
+  /* overflow: hidden; */
+
+}
+.blurb:hover{
+  transform: translateY(-20px) scale(1.03);
+  background: #101c23;
+}
+.blurb p{
+  transition: transform 0.3s ease;
+}
+.blurb:hover lord-icon, .blurb:hover p{
+  transform: translateY(-50px);
+}
+.blurb #blurb-description{
+  padding:20px;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.1s, transform 0.5s, font-size 0.5s, scale 0.3s, bottom 0.3s ease;
+  line-height: 140%;
+  font-size: 13px;
+  scale: 0;
+  bottom: 0px;
+  position: absolute;
+}
+.blurb:hover #blurb-description{
+  opacity: 1;
+  transform: translateY(0);
+  /* font-size: 13px; */
+  scale: 1;
+  bottom: 15px;
+}
+
+
+
