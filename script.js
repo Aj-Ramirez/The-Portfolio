@@ -193,7 +193,7 @@ function changeText(text) {
   button.textContent = text;
 }
 function changeTextIntro(text) {
-  const button = document.querySelector(".btn-intro");
+  const button = document.querySelector(".iconnect-btn");
   button.textContent = text;
 }
 // END

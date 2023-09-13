@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Prompt:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
   --text-color: #111;
@@ -66,12 +65,13 @@ h5 {
   overflow-wrap: break-word;
   hyphens: auto;
 }
-
+.introduction-text{
+  z-index: -1;
+}
 .intro-Text{
   font-size: 100px;
   line-height: 1;
   font-weight: 800;
-  z-index: 4;
   width: 100%;
   white-space: nowrap;
 }
@@ -373,7 +373,7 @@ h2 {
   display: none;
   width: 100%;
   height: 40vh;
-  background-color: #eeeeee;
+  background-color: #fff;
   position: fixed;
   top: -100vh; /* Initially positioned above the viewport */
   left: 0;
@@ -726,6 +726,31 @@ h2 {
   width: 100vw;
   height: 100vh;
   position: relative;
+  background-color: #fff;
+  filter: drop-shadow(0px 5px 100px #09131834);
+  z-index: 2;
+}
+.hero-gradient {
+  position: absolute;
+  width: 800px;
+  height: 150px;
+  left: 50%;
+  bottom: -10%;
+  transform: translate(-50%, 0%);
+  background: #1fc3f0a9;
+  filter: blur(150px);
+  z-index: -10;
+  animation: show-gradient 4s ease 5s forwards;
+  opacity: 0;
+}
+@keyframes show-gradient{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 100;
+  }
+
 }
   .heroHeadings{
     display: flex;
@@ -802,17 +827,17 @@ z-index: 90;
     background-color: #1fc2f0;
     transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
   }
-  .button:hover::before {
+  .button:hover::before{
     scale: 3;
   }
-  .button:hover {
+  .button:hover{
     color: #fff;
     scale: 1.1;
     box-shadow: 0 0px 20px #111c2734;
     transition: 0.3s ease;
   }
-  .button:active {
-    scale: 1;
+  .button:active, .iconnect-btn:active{
+    scale: 1 !important;
   }
 
 .tracking-in-expand {
@@ -846,7 +871,7 @@ z-index: 90;
 /* LOGO */
 #name{
   font-size: 3rem;
-  font-weight: 700;
+  font-weight: 900;
   font-family: "Poppins" !important;
   line-height: 80%;
   transition: color 0.3s ease;
@@ -903,7 +928,24 @@ position: relative;
   }
 
   /* MOUSE SCROLL  */
-.container .mouse {
+ .container .scroll-mouse {
+  overflow:hidden;
+  position:absolute;  
+  left:50%;
+  bottom: 0;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  animation: show-mouse 3s cubic-bezier(0.77, 0, 0.175, 1) 3s forwards;
+  animation-delay: 5s;
+} 
+@keyframes show-mouse{
+  from{
+      opacity: 0;
+  } to {
+      opacity: 1;
+  }
+}
+/* .container .mouse {
   overflow:hidden;
   position:absolute;  
   left:50%;
@@ -916,10 +958,10 @@ position: relative;
   opacity:.3;
   z-index: 1000;
   opacity: 0;
-  /* background: #979797; */
   animation: show-mouse 3s cubic-bezier(0.77, 0, 0.175, 1) 3s forwards;
   animation-delay: 5s;
 }
+
   .container .mouse:after {
     display: block;
     content:"";
@@ -969,7 +1011,7 @@ position: relative;
       transform: translateY(15px);
       opacity: 0;
     }
-  }
+  } */
 
 .body-text-wrapper{
   max-width: 700px;
@@ -1315,7 +1357,7 @@ a:hover{
   justify-content: space-around;
   align-items: center;
   margin: 0 auto;
-  margin-left: 125px;
+  /* margin-left: 125px; */
 }
   .border {
     height: 369px;
@@ -1333,7 +1375,7 @@ a:hover{
       width: 300px;
       background: #808080;
       border-radius: 15px;
-      transition: background 0.8s, filter 0.5s, scale 0.3s ease;
+      transition: background 0.6s, filter 0.5s, scale 0.3s ease;
       overflow: hidden;
       background: #000;
       /* box-shadow: 0 70px 63px -60px #00000080; */
@@ -1347,11 +1389,16 @@ a:hover{
       background: url("./images/aj.jpg") center center no-repeat;
       background-size: 400px;
       filter: grayscale(100);
+      box-shadow:0 0 0em  rgba(35, 36, 36, 0.626);
+      transition:  background 0.6s, filter 0.5s, scale 0.3s, box-shadow 0.3s ease;
     }
     .card0:hover {
       background: url("./images/aj.jpg") left center no-repeat;
       background-size: 600px;
       filter: grayscale(0);
+      box-shadow:0 0 2em  rgba(20, 135, 185, 0.721);
+      scale: 1.05;
+      
     }
     /* .card0::before {
       content: "";
@@ -1377,11 +1424,15 @@ a:hover{
       background: url("./images/aj1.jpg") center center no-repeat;
       background-size: 300px;
       filter: grayscale(100);
+      box-shadow: 0 0 0em  #733ee2;
+      transition:  background 0.6s, filter 0.5s, scale 0.3s, box-shadow 0.3s ease;
     }
     .card1:hover {
       background: url("./images/aj1.jpg") left center no-repeat;
       background-size: 600px;
       filter: grayscale(0);
+      box-shadow: 0 0 3em  #733ee2;
+      scale: 1.05;
     }
     .card1:hover #photo-name {
       opacity: 1;
@@ -1488,6 +1539,7 @@ a:hover{
   #about-me-text{
     max-width: 1100px;
     line-height: 150%;
+    
   }
     #about-me-text p {
       font-size: 1.5rem;
@@ -1495,6 +1547,10 @@ a:hover{
       font-weight: 600;
       text-align: start;
       margin-left: 10px;
+      font-family: 'prompt';
+      font-weight: 900;
+      font-size: 50px;
+      line-height: 100%;
     }
     
     #specialTextIntro{
@@ -1541,239 +1597,11 @@ a:hover{
     }
 
 
-.box-container{
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  justify-content:center;
-  background-color: #357ec82c;
-  background-color: transparent;
-  padding: 0px;
-  border-radius: 20px;
-  height: 100%;
-  width: 100%;
-  /* margin-top: 20px; */
-}
+
   lord-icon{
     transition: margin-top 0.5s, transform 0.5s ease;
   }
-  .box-container p{
-    transition: margin-top 0.5s, transform 0.5s ease;
-    z-index: 1;
-    font-size: 15px;
-    text-align: center;
-    line-height: 120%;
-  }
-    .box {
-      width: 100%;
-      height: 100%;
-      border-radius: 20px;
-      /* background-color: rgb(20, 20, 20); */
-      background-color: #171E27;
-      border: none;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
-      cursor: pointer;
-      transition-duration: .3s;
-      overflow: hidden;
-      position: relative;
-    }
-    .box:hover  {
-      width: 250%;
-      border-radius: 10px;
-      transition-duration: .3s;
-      background-color: #0d4378;
-      align-items: center;
-      background-size: 700px;
-    }
-    .box:hover p, .box:hover lord-icon {
-      transform: translateY(-50px);
-    }
-    .box4:hover, .box2:hover {
-      width: 250%;
-      border-radius: 10px;
-      transition-duration: .3s;
-      background-color: #0d4378;
-      align-items: center;
-      background-size: 1000px;
-    }
-    .box1:hover {
-      width: 250%;
-      border-radius: 10px;
-      transition-duration: .3s;
-      background-color: #0d4378;
-      align-items: center;
-      background-size: 1100px;
-    }
-    .box:hover::before{
-      font-size: 15px;
-      opacity: 1;
-      transform: translateY(20px);
-      transition-duration: 0.65s;
-    }
-    .box:hover::after {
-      opacity: 1; /* Show the overlay on hover */
-    }
-
-    .box1{
-      background: url(https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80) center center no-repeat;
-      background-size: 1100px;
-    }
-      .box1::before {
-        position: absolute;
-        bottom: 50px;
-        content: "Aj's creative journey is marked by an unwavering enthusiasm for design. With a keen eye for aesthetics and an innate understanding of user preferences, Aj transforms ideas into visually captivating designs that resonate with audiences.";
-        transition-duration: .3s;
-        font-size: 15px;
-        padding: 20px;
-        line-height: 150%;
-        font-weight: 500;
-
-        transform: translateY(700px);
-        z-index: 1;
-      }
-      .box1::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha (last value) to control the darkness */
-        opacity: 0; /* Initially hidden */
-        pointer-events: none; /* Allow clicks to go through the overlay */
-        transition: opacity 0.5s;
-        
-      }
-    .box2{
-      background: url(https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80) center center no-repeat;
-      background-size: 1100px;
-    }
-      .box2::before {
-        position: absolute;
-        bottom: 50px;
-        content: "Beyond design, Aj's prowess extends into the realm of technology. Armed with a deep-seated curiosity for emerging trends and technologies, Aj blends creativity with cutting-edge tools to engineer seamless and interactive frontend solutions.";
-        transition-duration: .3s;
-        font-size: 15px;
-        padding: 20px;
-        line-height: 150%;
-        font-weight: 500;
-
-        transform: translateY(700px);
-        z-index: 1;
-      }
-      .box2::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha (last value) to control the darkness */
-        opacity: 0; /* Initially hidden */
-        pointer-events: none; /* Allow clicks to go through the overlay */
-        transition: opacity 0.5s;
-        
-      }
-    .box3{
-      background: url(https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80) center center no-repeat;
-      background-size: 800px;
-    }
-      .box3::before {
-        position: absolute;
-        bottom: 50px;
-        content: "Aj's expertise shines brightest on mobile and web platforms. Whether it's a sleek mobile app interface or a captivating website layout, Aj's work bridges the gap between these two dynamic worlds, delivering experiences that users truly enjoy.";
-        transition-duration: .3s;
-        font-size: 15px;
-        padding: 20px;
-        line-height: 150%;
-        font-weight: 500;
-
-        transform: translateY(700px);
-        z-index: 1;
-      }
-      .box3::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha (last value) to control the darkness */
-        opacity: 0; /* Initially hidden */
-        pointer-events: none; /* Allow clicks to go through the overlay */
-        transition: opacity 0.5s;
-        
-      }
-    .box4{
-      background: url(https://cdn.dribbble.com/users/21260/screenshots/1679085/mobile.ui.blueprint.png?resize=800x600&vertical=center) center center no-repeat;
-      background-size: 1000px;
-    }
-      .box4::before {
-        position: absolute;
-        bottom: 50px;
-        content: " At the heart of Aj's creations lies a dedication to users. Every design element and tech innovation is meticulously tailored to enhance user experiences, making them not only user-friendly but user-cherished.";
-        transition-duration: .3s;
-        font-size: 15px;
-        padding: 20px;
-        line-height: 150%;
-        font-weight: 500;
-
-        transform: translateY(700px);
-        z-index: 1;
-      }
-      .box4::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha (last value) to control the darkness */
-        opacity: 0; /* Initially hidden */
-        pointer-events: none; /* Allow clicks to go through the overlay */
-        transition: opacity 0.5s;
-        
-      }
-
-    /* .soc__btn:hover .svgIcon {
-      width: 50px;
-      transition-duration: .3s;
-      transform: translateY(60%);
-    } */
-        /* .linkedIn_Icon:hover  {
-      width: 200%;
-      border-radius: 10px;
-      transition-duration: .3s;
-      background-color: #0d4378;
-      align-items: center;
-    }
-    .dribbble_Icon:hover {
-      width: 250%;
-      border-radius: 10px;
-      transition-duration: .3s;
-      background-color: #de5887;
-      align-items: center;
-    }
-    /* .linkedIn_Icon::before {
-      position: absolute;
-      top: -20px;
-      content: "LinkedIn";
-      color: white;
-      transition-duration: .3s;
-      font-size: 2px;
-    }
-    .dribbble_Icon::before {
-      position: absolute;
-      top: -20px;
-      content: "Dribbble";
-      color: white;
-      transition-duration: .3s;
-      font-size: 2px;
-    } */
+  
 .about-us-grid-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1782,7 +1610,7 @@ a:hover{
   grid-row-gap: 30px;
 
   height: 90vh;
-  width: 95vw;
+  width: 90vw;
   /* background-color: gray; */
   }
       .grid1 { 
@@ -1822,27 +1650,38 @@ a:hover{
   height: 100%;
   position: relative;
 
-  transition: transform 0.3s, background 0.5s ease;
+  transition: transform 0.3s, background 0.5s, filter 2s ease;
 
-  border-radius: 20px;
+  border-radius: 40px;
   border: none;
   font-weight: 600;
   transition-duration: .3s;
   /* overflow: hidden; */
 
+  border: 1px solid #ffffff17;
 }
+/* .blurb:hover > .blurb:not(:hover) {
+  filter: blur(10px);
+  transform: scale(0.9, 0.9);
+} */
 .blurb:hover{
-  transform: translateY(-20px) scale(1.03);
+  transform: translateY(-10px) scale(1.03);
   background: #101c23;
+  /* filter: drop-shadow(0 0 3em  rgba(33, 182, 246, 0.626)); */
+  border: none;
 }
 .blurb p{
   transition: transform 0.3s ease;
+  z-index: 1;
+}
+lord-icon{
+  z-index: 1;
 }
 .blurb:hover lord-icon, .blurb:hover p{
   transform: translateY(-50px);
 }
 .blurb #blurb-description{
-  padding:20px;
+  padding:30px;
   opacity: 0;
   transform: translateY(100px);
   transition: opacity 0.1s, transform 0.5s, font-size 0.5s, scale 0.3s, bottom 0.3s ease;
@@ -1860,5 +1699,73 @@ a:hover{
   bottom: 15px;
 }
 
+  .blurb1::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 0px;
+    width: 0px;
+    transform: translate(-50%, -50%);
+    background-color: #733ee2;
+    z-index: 1;
+    border-radius: inherit;
+    transition: all 0.3s ease;
+  } 
+  .blurb2::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 0px;
+    width: 0px;
+    transform: translate(-50%, -50%);
+    background-color: #19a6e2;
+    z-index: 1;
+    border-radius: inherit;
+    transition: all 0.3s ease;
+  } 
+  .blurb3::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 0px;
+    width: 0px;
+    transform: translate(-50%, -50%);
+    background-color: #56D049;
+    z-index: 1;
+    border-radius: inherit;
+    transition: all 0.3s ease;
+  } 
+  .blurb4::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 0px;
+    width: 0px;
+    transform: translate(-50%, -50%);
+    background-color: #fecf43;
+    z-index: 1;
+    border-radius: inherit;
+    transition: all 0.3s ease;
+  } 
+  .blurb1:hover::before, .blurb2:hover::before, .blurb3:hover::before, .blurb4:hover::before{
+    height: inherit;
+    width: inherit;
+  }
+  /* .blurb1:hover{
+    background: #733ee2;
+  } 
+  .blurb2:hover{
+    background: #19a6e2;
+  }
+  .blurb3:hover{
+    background: #56D049;
+  }
+  .blurb4:hover{
+    background: #fecf43;
+  }*/
 
 
