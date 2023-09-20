@@ -33,13 +33,7 @@
 
 <body>
   <div class="cursor"></div>
-  <div class="nav_wrapper">
-    <div class="in_nav_wrapper">
-      <p>in_nav_wrapper</p>
-    </div>
-    <p>nav_wrapper</p>
-  </div>
-  <div class="burger-nav">
+   <div class="burger-nav">
     <div class="burgnav">
       <input type="checkbox" />
       <svg>
@@ -48,26 +42,93 @@
       </svg>
     </div>
     <!-- SVG -->
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 56" id="menu">
-        <path d="M48.33,45.6H18a14.17,14.17,0,0,1,0-28.34H78.86a17.37,17.37,0,0,1,0,34.74H42.33l-21-21.26L47.75,4"/>
-      </symbol>
-    </svg>
-    </div>
+      <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 56" id="menu">
+          <path d="M48.33,45.6H18a14.17,14.17,0,0,1,0-28.34H78.86a17.37,17.37,0,0,1,0,34.74H42.33l-21-21.26L47.75,4"/>
+        </symbol>
+      </svg>
   </div>
-  <p id="name" class="slide-in-blurred-left" data-scroll-direction="vertical" data-scroll-speed="2">
-    <span>
-      <lord-icon
-        src="https://cdn.lordicon.com/rwotyanb.json"
-        trigger="morph"
-        colors="primary:#21374d,secondary:#1fc2f0"
-        stroke="75"
-        style="width:80px;height:80px">
-      </lord-icon>
-    </span>aj ramirez<span class="dot">.</span></p>
+  <div class="nav_wrapper">
+    <div class="in_nav_wrapper">
+
+      <div class="nav-row-container">
+        <div class="nav_col_1">
+          <ul class="ul_nav_links">
+            <li class="link">Home</li>
+            <li class="link">About</li>
+            <li class="link">Project</li>
+            <li class="link">Experience</li>
+            <li class="link">Contact</li>
+          </ul>
+        </div>
+        <div class="nav_col_2">
+          <ul class="ul_social_nav">
+            <li id="resume_" class="social_icon">
+              <lord-icon
+                src="https://cdn.lordicon.com/vufjamqa.json"
+                trigger="hover"
+                colors="primary:#121331"
+                style="width:50px;height:50px">
+              </lord-icon>
+            </li>
+            <li id="email_" class="social_icon">
+              <lord-icon
+                src="https://cdn.lordicon.com/hpivxauj.json"
+                trigger="hover"
+                colors="primary:#121331"
+                style="width:50px;height:50px">
+              </lord-icon>
+            </li>
+            <li id="call_" class="social_icon">
+              <lord-icon
+                src="https://cdn.lordicon.com/ssvybplt.json"
+                trigger="hover"
+                colors="primary:#121331"
+                style="width:50px;height:50px">
+              </lord-icon>
+            </li>
+            <li id="plan_" class="social_icon">
+              <lord-icon
+                src="https://cdn.lordicon.com/qjuahhae.json"
+                trigger="hover"
+                colors="primary:#121331"
+                style="width:50px;height:50px">
+              </lord-icon>
+            </li>
+            <li id="socials_" class="social_icon">
+              <lord-icon
+                src="https://cdn.lordicon.com/wxhtpnnk.json"
+                trigger="hover"
+                colors="primary:#121331"
+                style="width:50px;height:50px">
+              </lord-icon>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    <p>nav_wrapper</p>
+  </div>
+ 
+  
+    <p id="name" class="slide-in-blurred-left" data-scroll-direction="vertical" data-scroll-speed="2">
+      <span>
+        <a href="/">
+          <lord-icon
+            src="https://cdn.lordicon.com/rwotyanb.json"
+            trigger="morph"
+            colors="primary:#21374d,secondary:#1fc2f0"
+            stroke="75"
+            style="width:80px;height:80px">
+          </lord-icon>
+        </a>
+      </span>aj ramirez<span class="dot">.</span>
+    </p>
+  
   <!-- Start -->
   <div class="container">
-    <section class="hero" data-bgcolor="#091318" data-textcolor="#8b949a" data-scroll data-scroll-direction="vertical" data-scroll-speed="2.5">
+    <section class="hero jumbotron" data-bgcolor="#091318" data-textcolor="#8b949a" data-scroll data-scroll-direction="vertical" data-scroll-speed="2.5">
       <div class="heroHeadings" style="text-align: center;">
         <h1 id="heading1" data-scroll data-scroll-direction="vertical" data-scroll-speed="-0.5">
           <div class="tracking-in-contract-bck-top">
@@ -84,14 +145,14 @@
         </h1>
       </div>
       <br><br><br>
-      <div class="body-text-wrapper">
+      <div class="body-text-wrapper"> 
         <p id="hero-body-text" data-scroll data-scroll-direction="vertical" data-scroll-speed="1" class="text-focus-in">
           Crafting seamless connections between design and functionality to deliver an remarkable user experience.
           <!-- <span style="color: #3782ce;">Let's make it happen!</span> -->
         </p>
       </div>
       <br><br>
-      <a onclick="scrollToSection('introduction')">
+      <a onclick="scrollToSection('icon-container')">
         <button data-scroll data-scroll-direction="vertical" data-scroll-speed="1" class="button tracking-in-expand"
           onmouseover="changeText('Let`s make it happen')" onmouseout="changeText('Get Started')"
           onclick="scrollToIntro()">
@@ -102,11 +163,11 @@
             class="scroll-mouse"
             src="https://cdn.lordicon.com/wtfdpwey.json"
             trigger="loop"
+            stroke="75"
             colors="primary:#21374d,secondary:#1797ce"
             style="width:60px;height:60px">
         </lord-icon>
       <div data-scroll data-scroll-direction="vertical" data-scroll-speed="0.5" class="mouse">
-        
       </div>
 
       <!-- <div class="my-icon" data-scroll data-scroll-direction="vertical" data-scroll-speed="-3">
@@ -123,18 +184,10 @@
     </section>
 
 
-      <div class="introduction-text" data-scroll data-scroll-direction="vertical" data-scroll-speed="-2">
-        <h2 class="intro-Text" data-textcolor="#1fc2f0" data-bgcolor="#091318" data-scroll data-scroll-direction="horizontal" data-scroll-speed="20">
-          <!-- TAKE A PEEK INTO MAGICAL WORLD! -->
-          Where Creative Designer and
-        </h2>
-        <h2 class="intro-Text" data-textcolor="#1fc2f0" data-bgcolor="#091318" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-20">
-         Technology Meets In One Body
-        </h2>
-      </div>
+      
 
-
-    <section class="slide_Collections_Wrapper" data-bgcolor="#091318">
+  <div class="introduction-text">
+    <section class="slide_Collections_Wrapper" data-bgcolor="#091318" >
       <div class="collection_Preview" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-10">
         <img src="./images/Breadily.jpg" alt="Breadily Web Design">
         <img src="./images/TheRealty.png" alt="The Realty Web Design">
@@ -142,6 +195,14 @@
       </div>
     </section>
 
+      <h2 class="intro-Text" data-textcolor="#1fc2f0" data-bgcolor="#091318" data-scroll data-scroll-direction="horizontal" data-scroll-speed="30">
+        <!-- TAKE A PEEK INTO MAGICAL WORLD! -->
+        Where Creative Designer and
+      </h2>
+      <h2 class="intro-Text" data-textcolor="#1fc2f0" data-bgcolor="#091318" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-30">
+       Technology Meets In One Body
+      </h2>
+    
     <section class="slide_Collections_Wrapper" data-bgcolor="#091318">
       <div class="collection_Preview" data-scroll data-scroll-direction="horizontal" data-scroll-speed="10">
         <img src="./images/Votanica.png" alt="Votanica Web Design">
@@ -151,7 +212,10 @@
     </section>
 
     <div id="icon-container" class="intro-Text logos" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-15">
-      <!-- My TechStack -->
+      <div id="icon-techstack">
+        <!-- My TechStack -->
+      </div>
+    </div>
     </div>
 
     <div class="iconnection" data-textcolor="#1fc2f0" data-bgcolor="#091318">
@@ -159,7 +223,7 @@
         <img id="icon-left" src="./images/favicon.svg" />
       </div>
 
-      <div class="iconnection-text">
+      <div id="iconnection" class="iconnection-text" >
         <h2 data-scroll data-scroll-direction="vertical" data-scroll-speed="-1" style="margin-bottom: 30px;" class="shine">
           Here's your last piece to your masterpiece<span>I think you'll become part of my masterpiece.</span>
         </h2>
@@ -178,7 +242,16 @@
     <section class="horizontal-scroll" data-textcolor="#eeeeee" data-bgcolor="#030303">
       <div class="pin-wrap">
         <div style="width: 100vw;">
-          <h2 id="introducing" data-scroll data-scroll-direction="horizontal" data-scroll-speed="1"><span >What zup&nbsp;you  guys...</span></h2>
+          <h2 id="introducing" data-scroll data-scroll-direction="horizontal" data-scroll-speed="1">
+            <lord-icon
+              src="https://cdn.lordicon.com/zmkotitn.json"
+              trigger="hover"
+              colors="primary:#1fc2f0"
+              state="intro"
+              style="width:500px;height:500px">
+          </lord-icon>
+            <span >Welcome</span> 
+          </h2>
         </div>
         <div>
           <h1 id="about-title" data-scroll data-scroll-direction="horizontal" data-scroll-speed="0.1"
@@ -438,23 +511,32 @@
            </div>
           </div> -->
       <!-- <div id="about-container">
-           
         </div> -->
-      <div id='holdboth' data-scroll data-scroll-direction="vertical" data-scroll-speed="5">
-        <div id='hiddenarea' class="initclip positionadjust textstyles texttop">
-          In a world where design and technology converge, Aj Ramirez stands as a beacon of innovation, crafting digital landscapes that are as functional as they are aesthetically delightful.
+      <!-- <div id='holdboth' data-scroll data-scroll-direction="vertical" data-scroll-speed="5">
+        <div class="positionadjust textstyles textbottom" style="color:#eeeeee;">
+          In a world where design and technology converge, Aj stands as a beacon of innovation, crafting digital assets that are as functional as they are aesthetically delightful, setting new standards for creativity and user experience excellence.
         </div>
-        <div class="positionadjust textstyles textbottom">
-          In a world where design and technology converge, Aj Ramirez stands as a beacon of innovation, crafting digital landscapes that are as functional as they are aesthetically delightful.
+        <div id='hiddenarea' class="initclip positionadjust textstyles texttop" style="color:#1fc2f0;">
+           I thrive on pushing the boundaries of creativity to deliver interactive and responsive websites that engage, inspire, and captivate. Line of code is a stroke of innovation and developing state-of-the-art technology.
+        </div>
+      </div>
+    </section> -->
+      <div id='holdboth' data-scroll data-scroll-direction="vertical" data-scroll-speed="5">
+        <div class="positionadjust textstyles textbottom" style="color:#eeeeee;">
+          In this world brimming with artisans, my passion burns like an unquenchable fire and flexible as water, creating a tunefulness symphony of creativity. Developing a single idea, will change the world.
+        </div>
+        <div id='hiddenarea' class="initclip positionadjust textstyles texttop" style="color:#1fc2f0;">
+           I thrive on pushing the boundaries of creativity to deliver interactive and responsive websites that engage, inspire, and captivate. Line of code is a stroke of innovation and developing state-of-the-art technology.
         </div>
       </div>
     </section>
 
-    <section class="horizontal-scroll" data-textcolor="#21374d" data-bgcolor="#eeeeee">
+    <section class="horizontal-scroll" data-textcolor="#091318" data-bgcolor="#eeeeee">
       <div class="pin-wrap">
         <div>
-          <h1><span data-scroll data-scroll-direction="horizontal" data-scroll-speed="-1"
-              style="white-space: nowrap;">Experiences scroll+ colors</span></h1>
+          <h1 style="white-space: nowrap;" class="h2-title"> 
+            Projects and Experiences
+          </h1>
         </div>
         <img src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt="">
         <img src="https://images.pexels.com/photos/3371358/pexels-photo-3371358.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt="">
@@ -463,25 +545,19 @@
     </section>
 
     <section class="text_readings" data-bgcolor="#111c27" data-textcolor="#fff">
-      <lord-icon
-      src="https://cdn.lordicon.com/nobciafz.json"
-      trigger="morph"
-      colors="primary:#21374d,secondary:#1fc2f0"
-      style="width:100px;height:100px">
-    </lord-icon>
-      <h3 data-scroll data-scroll-speed="5" data-scroll-direction="horizontal" class="text">
+      <h3 class="text">
         TEXT EFFECT<span class="span_text">WOAH</span>
       </h3>
-      <h3 class="text" data-scroll data-scroll-speed="-4" data-scroll-direction="horizontal">
+      <h3 class="text">
         GSAP<span class="span_text">AND CLIPPING</span>
       </h3>
-      <h3 class="text" data-scroll data-scroll-speed="3" data-scroll-direction="horizontal">
+      <h3 class="text">
         CRAZYYY<span class="span_text">DEYYYM</span>
       </h3>
-      <h3 class="text" data-scroll data-scroll-speed="-2" data-scroll-direction="horizontal">
+      <h3 class="text">
         HOVER ON ME <span class="span_text">SOURCE</span>
       </h3>
-      <h3 class="text" data-scroll data-scroll-speed="1" data-scroll-direction="horizontal">
+      <h3 class="text">
         LIKE THIS?<span class="span_text">LET'S CONNECT</span>
       </h3>
     </section>
@@ -594,6 +670,7 @@
   <script src="./navigation.js"></script>
   <script src="./techstack_icon.js"></script>
   <script src="./textReveal.js"></script>
+
   <script>
 
   </script>

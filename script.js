@@ -20,7 +20,7 @@ window.addEventListener("load", function () {
     scrollTop(value) {
       return arguments.length
         ? scroller.scrollTo(value, 0, 0)
-        : scroller.scroll.instance.scroll.y;
+          : scroller.scroll.instance.scroll.y;
     },
     getBoundingClientRect() {
       return {
@@ -142,6 +142,43 @@ window.addEventListener("load", function () {
   ScrollTrigger.addEventListener("refresh", () => scroller.update());
 
   ScrollTrigger.refresh();
+
+
+  
+  // HEADING TEXT FILL ANIMATION
+  function applyStylesWithColor() {
+    document.getElementById("heading1").style.color = "#111c27";
+    document.getElementById("heading2").style.color = "#3782ce";
+    //  document.getElementById("heading2").classList.add("heading2");
+  }
+  setTimeout(applyStylesWithColor, 2000);
+
+  //  HERO BTN AND HEADING CHANGE TEXT
+  function changeTextFront(text) {
+    const front = document.querySelector("#front");
+    front.textContent = text;
+  }
+  function changeTextEnd(text) {
+    const end = document.querySelector("#end");
+    end.textContent = text;
+  }
+  function changeTextDev(text) {
+    const dev = document.querySelector("#dev");
+    dev.textContent = text;
+  }
+  function changeTextHero(text) {
+    const dev = document.querySelector("#dev");
+    dev.textContent = text;
+  }
+  function changeText(text) {
+    const button = document.querySelector(".button");
+    button.textContent = text;
+  }
+  function changeTextIntro(text) {
+    const button = document.querySelector(".iconnect-btn");
+    button.textContent = text;
+  }
+  // END
 });
 
 // document.addEventListener("DOMContentLoaded", function() {
@@ -163,37 +200,3 @@ window.addEventListener("load", function () {
 //   });
 // });
 
-// HEADING TEXT FILL ANIMATION
-function applyStylesWithColor() {
-  document.getElementById("heading1").style.color = "#111c27";
-  document.getElementById("heading2").style.color = "#3782ce";
-  //  document.getElementById("heading2").classList.add("heading2");
-}
-setTimeout(applyStylesWithColor, 2000);
-
-//  HERO BTN AND HEADING CHANGE TEXT
-function changeTextFront(text) {
-  const front = document.querySelector("#front");
-  front.textContent = text;
-}
-function changeTextEnd(text) {
-  const end = document.querySelector("#end");
-  end.textContent = text;
-}
-function changeTextDev(text) {
-  const dev = document.querySelector("#dev");
-  dev.textContent = text;
-}
-function changeTextHero(text) {
-  const dev = document.querySelector("#dev");
-  dev.textContent = text;
-}
-function changeText(text) {
-  const button = document.querySelector(".button");
-  button.textContent = text;
-}
-function changeTextIntro(text) {
-  const button = document.querySelector(".iconnect-btn");
-  button.textContent = text;
-}
-// END

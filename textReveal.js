@@ -147,3 +147,52 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+   // Get the text hero animmation
+   const textContainer = document.getElementById('hero-body-text');
+
+   // Split the text into words
+   const words = textContainer.textContent.split(' ');
+   
+   // Clear the content of the text container
+   textContainer.textContent = '';
+   
+   // Create and append span elements for each word with animation properties and spaces
+   words.forEach((word, index) => {
+     const span = document.createElement('span');
+     span.textContent = word;
+     span.style.opacity = '0';
+     span.style.filter = 'blur(4px)';
+     span.style.animation = `fade-in 0.8s ${index * 0.1 + 0.1}s forwards cubic-bezier(0.11, 0, 0.5, 0)`;
+     textContainer.appendChild(span);
+   
+     // Add a space character after each word
+     if (index < words.length - 1) {
+       const space = document.createTextNode(' ');
+       textContainer.appendChild(space);
+     }
+   });
+   
+   // Start the animation by adding a class to the text container
+   textContainer.classList.add('animate-text');
+   
+   // Define the fade-in animation using CSS
+   const css = `
+     @keyframes fade-in {
+       100% {
+         opacity: 1;
+         filter: blur(0);
+       }
+     }
+   
+     .animate-text > span {
+       animation-duration: 1s;
+       animation-timing-function: cubic-bezier(0.11, 0, 0.5, 0);
+     }
+   `;
+   
+   // Create a style element and add the animation CSS
+   const style = document.createElement('style');
+   style.appendChild(document.createTextNode(css));
+   
+   // Add the style element to the document head
+   document.head.appendChild(style);

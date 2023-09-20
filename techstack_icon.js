@@ -137,11 +137,52 @@ const icons = [
   },
 ];
 
-const iconContainer = document.getElementById("icon-container");
+const iconContainer = document.getElementById("icon-techstack");
 
 icons.forEach((icon) => {
   const div = document.createElement("div");
-  div.classList.add("svg-container");
+  div.classList.add("svg-container", "item");
   div.innerHTML = icon.svg + `<span class="hover-text">${icon.text}</span>`;
   iconContainer.appendChild(div);
 });
+
+
+
+// // Demo 1
+
+// const cardsContainer = document.querySelector("#icon-container");
+
+// // Duplicate the cards (for wrapping purposes)
+// cardsContainer.innerHTML += cardsContainer.innerHTML;
+
+// // Get the DOM references
+// const cards = gsap.utils.toArray("#icon-container .item");
+
+// function setAnimValues() {
+//   // Get the correct width
+//   const cardWidth = innerWidth / (cards.length / 2);
+  
+//   // Set the default position
+//   cards.forEach((card, i) => 
+//     gsap.set(card, {
+//       x: () => i * cardWidth,
+//       overwrite: "auto"
+//     })
+//   );
+  
+//   // Animate the cards
+//   gsap.to(cards, {
+//     duration: 10,
+//     ease: "none",
+//     x: `+=${innerWidth}`,
+//     repeat: -1,
+//     // Wrap the cards when appropriate
+//     modifiers: {
+//       x: gsap.utils.unitize(gsap.utils.wrap(-cardWidth, innerWidth * 2 - cardWidth), "px")
+//     },
+//   });
+// }
+
+// // Make sure it works on resize
+// window.addEventListener("resize", setAnimValues);
+// setAnimValues();

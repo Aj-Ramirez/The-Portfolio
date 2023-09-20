@@ -3,22 +3,26 @@
 #holdboth{
   position:relative;
   height: 100vh;
-  width: 100vw;
+  width: 70vw;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 .positionadjust{
   position:absolute;
 }
 .textstyles{
+  font-family: 'prompt' !important;
+  font-weight: 900;
   font-size:48px;
-  padding:20px;
-  font-weight:bold;
+  /* padding:20px; */
+  /* font-weight:bold; */
   display: flex;
   align-items: center;
   width: inherit;
   justify-content: center;
+  line-height: 130%;
 }
 .texttop{
   /* color:#21374d; */
