@@ -143,8 +143,28 @@ window.addEventListener("load", function () {
 
   ScrollTrigger.refresh();
 
+});
 
-  
+// document.addEventListener("DOMContentLoaded", function() {
+//   gsap.registerPlugin(ScrollTrigger);
+
+//   const textElements = gsap.utils.toArray('.text');
+
+//   textElements.forEach(text => {
+//        gsap.to(text, {
+//        backgroundSize: '100%',
+//        ease: 'none',
+//        scrollTrigger: {
+//             trigger: text,
+//             start: 'center 80%',
+//             end: 'center 20%',
+//             scrub: true,
+//             },
+//        });
+//   });
+// });
+
+
   // HEADING TEXT FILL ANIMATION
   function applyStylesWithColor() {
     document.getElementById("heading1").style.color = "#111c27";
@@ -179,24 +199,3 @@ window.addEventListener("load", function () {
     button.textContent = text;
   }
   // END
-});
-
-// document.addEventListener("DOMContentLoaded", function() {
-//   gsap.registerPlugin(ScrollTrigger);
-
-//   const textElements = gsap.utils.toArray('.text');
-
-//   textElements.forEach(text => {
-//        gsap.to(text, {
-//        backgroundSize: '100%',
-//        ease: 'none',
-//        scrollTrigger: {
-//             trigger: text,
-//             start: 'center 80%',
-//             end: 'center 20%',
-//             scrub: true,
-//             },
-//        });
-//   });
-// });
-

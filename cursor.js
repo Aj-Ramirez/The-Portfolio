@@ -6,7 +6,7 @@ window.addEventListener("mouseup", handleMouseUp);
 window.addEventListener("wheel", handleMouseScrollStart);
 window.addEventListener("mousemove", handleMouseScrollEnd);
 
-// Add both "wheel" and "touchmove" event listeners
+// Add both "wheel" and "touchmove" event listenert
 window.addEventListener("wheel", handleScroll);
 window.addEventListener("touchmove", handleScroll);
 

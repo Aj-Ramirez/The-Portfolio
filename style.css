@@ -33,7 +33,6 @@ body {
   overscroll-behavior: none;
   /* cursor: none; */
 }
-
 .container{
   transition: margin-top 1s cubic-bezier(0.76, 0, 0.24, 1), filter 1s ease; 
 }
@@ -328,6 +327,7 @@ h2 {
     display: flex;
     gap: 30px;
     font-size: 2.5rem;
+    cursor: pointer;
   }
     .ul_nav_links li {
       display: block;
@@ -385,6 +385,8 @@ h2 {
     display: block;
     transform: translate(0, 105%);
     transition: transform 0.3s, opacity 0.3s, scale 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    
+    cursor: pointer;
   }
   .ul_social_nav li:hover{
     opacity: 1;
