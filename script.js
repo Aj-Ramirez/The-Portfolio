@@ -101,18 +101,6 @@ window.addEventListener("load", function () {
     }, 100);
   }
 
-  // pageContainer.addEventListener("mousemove", handleHoverText);
-  //   const shine = document.querySelector(".shine")
-  //   let c= document.querySelector('.cursor');
-
-  // function handleHoverText(event) {
-  //   var rect= shine.getBoundingClientRect();
-  //   const offsetX = event.clientX - rect.left;
-  //   const offsetY = event.clientY - rect.top;
-  //   const clipPathValue = `circle(100px at ${offsetX}px ${offsetY}px)`;
-  //   shine.style.clipPath = clipPathValue;
-  // }
-
 // COLOR CHANGER 
   const scrollColorElems = document.querySelectorAll("[data-bgcolor]");
   scrollColorElems.forEach((colorSection, i) => {
@@ -145,26 +133,6 @@ window.addEventListener("load", function () {
 
 });
 
-// document.addEventListener("DOMContentLoaded", function() {
-//   gsap.registerPlugin(ScrollTrigger);
-
-//   const textElements = gsap.utils.toArray('.text');
-
-//   textElements.forEach(text => {
-//        gsap.to(text, {
-//        backgroundSize: '100%',
-//        ease: 'none',
-//        scrollTrigger: {
-//             trigger: text,
-//             start: 'center 80%',
-//             end: 'center 20%',
-//             scrub: true,
-//             },
-//        });
-//   });
-// });
-
-
   // HEADING TEXT FILL ANIMATION
   function applyStylesWithColor() {
     document.getElementById("heading1").style.color = "#111c27";
@@ -177,15 +145,49 @@ window.addEventListener("load", function () {
   function changeTextFront(text) {
     const front = document.querySelector("#front");
     front.textContent = text;
+      front.animate(
+    [
+      { opacity: 0, transform: "translateY(10px)", filter: "blur(2px)" },
+      { opacity: 1, transform: "translateY(0px)", filter: "blur(0px)" }
+    ],
+    {
+      duration: 400,
+      easing: "ease-out"
+    }
+  );
   }
   function changeTextEnd(text) {
     const end = document.querySelector("#end");
     end.textContent = text;
+      end.animate(
+    [
+      { opacity: 0, transform: "translateY(10px)", filter: "blur(2px)" },
+      { opacity: 1, transform: "translateY(0px)", filter: "blur(0px)" }
+    ],
+    {
+      duration: 400,
+      easing: "ease-out"
+    }
+  );
   }
-  function changeTextDev(text) {
-    const dev = document.querySelector("#dev");
-    dev.textContent = text;
-  }
+function changeTextDev(text) {
+  const dev = document.querySelector("#dev");
+
+  // change text first
+  dev.textContent = text;
+
+  // run animation directly from JS
+  dev.animate(
+    [
+      { opacity: 0, transform: "translateY(10px)", filter: "blur(2px)" },
+      { opacity: 1, transform: "translateY(0px)", filter: "blur(0px)" }
+    ],
+    {
+      duration: 400,
+      easing: "ease-out"
+    }
+  );
+}
   function changeTextHero(text) {
     const dev = document.querySelector("#dev");
     dev.textContent = text;

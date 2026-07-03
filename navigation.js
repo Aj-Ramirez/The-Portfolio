@@ -1,4 +1,4 @@
-const burgerNav = document.querySelector('.burger-nav');
+  const burgerNav = document.querySelector('.burger-nav');
   const wrapper = document.querySelector('.nav_wrapper');
   const container = document.querySelector('.container');
   const inWrapper = document.querySelector('.in_nav_wrapper');
@@ -55,22 +55,20 @@ const burgerNav = document.querySelector('.burger-nav');
     isWrapperVisible = !isWrapperVisible;
   });
 
-  burgerNav.classList.add("slide-in-blurred-right");
-  setTimeout(() => {
-    burgerNav.classList.remove("slide-in-blurred-right");
-  }, 2000);
 
+  // burgerNav.classList.add("slide-in-blurred-right");
 
-  // function scrollToSection(sectionId) {
-  //   const section = document.getElementById(sectionId);
-  //   if (section) {
-  //     section.scrollIntoView({ behavior: 'smooth' });
-  //   }
-  // }
+  document.addEventListener("DOMContentLoaded",()=>{
+     burgerNav.removeAttribute("style");
+      setTimeout(() => {
+            burgerNav.removeAttribute("style");
+      // burgerNav.classList.remove("slide-in-blurred-right");
+    }, 2000);
+
+  })
   
-  // function scrollToIntro() {
-  //   scrollToSection('introduction');
-  // }
+
+
 
   function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
@@ -88,17 +86,5 @@ const burgerNav = document.querySelector('.burger-nav');
     }
   }
 
-  // function scrollToSection(sectionId) {
-  //   const section = document.getElementById(sectionId);
-  //   if (section) {
-  //     gsap.to(window, {
-  //       scrollTo: section,
-  //       duration: 1,
-  //       ease: "power2.inOut"
-  //     });
-  //   }
-  // }
-
- 
 
   
