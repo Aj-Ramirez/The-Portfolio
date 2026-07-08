@@ -78,29 +78,6 @@ window.addEventListener("load", function () {
     });
   });
 
-// TEXT ANIMATION REVEAL TEXT XRAY
-  const hbits = document.getElementById("hiddenarea");
-  // const hbits = document.querySelector(".shine");
-  pageContainer.addEventListener("mousemove", handleMouseMove);
-  let c = document.querySelector(".cursor");
-
-  function handleMouseMove(event) {
-    const rect = hbits.getBoundingClientRect();
-    const offsetX = event.clientX - rect.left;
-    const offsetY = event.clientY - rect.top;
-
-    hbits.addEventListener("mouseenter", () => {
-      c.classList.add("cursorHover"); // Add the class on hover
-    });
-    hbits.addEventListener("mouseleave", () => {
-      c.classList.remove("cursorHover"); // Remove the class when leaving
-    });
-    setTimeout(() => {
-      const clipPathValue = `circle(150px at ${offsetX}px ${offsetY}px)`;
-      hbits.style.clipPath = clipPathValue;
-    }, 100);
-  }
-
 // COLOR CHANGER 
   const scrollColorElems = document.querySelectorAll("[data-bgcolor]");
   scrollColorElems.forEach((colorSection, i) => {
@@ -201,3 +178,24 @@ function changeTextDev(text) {
     button.textContent = text;
   }
   // END
+
+// BG-DATA-COLOR CHANGE
+// data-bg as attribute
+const section = document.querySelector(".xray");
+const defaultBg = section.dataset.bgcolor;
+
+document.querySelectorAll(".card, .blurb").forEach((card) => {
+  card.addEventListener("mouseenter", () => {
+    gsap.to("body", {
+      backgroundColor: card.dataset.bg,
+      duration: 0.3,
+    });
+  });
+
+  card.addEventListener("mouseleave", () => {
+    gsap.to("body", {
+      backgroundColor: defaultBg,
+      duration: 0.3,
+    });
+  });
+});

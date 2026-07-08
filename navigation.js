@@ -1,90 +1,78 @@
-  const burgerNav = document.querySelector('.burger-nav');
-  const wrapper = document.querySelector('.nav_wrapper');
-  const container = document.querySelector('.container');
-  const inWrapper = document.querySelector('.in_nav_wrapper');
-  const target = document.querySelector(".ul_nav_links");
-  const target1 = document.querySelector(".ul_social_nav");
-  let isWrapperVisible = false;
+const burgerNav = document.querySelector(".burger-nav");
+const wrapper = document.querySelector(".nav_wrapper");
+const inWrapper = document.querySelector(".in_nav_wrapper");
+const container = document.querySelector(".container");
+const target = document.querySelector(".ul_nav_links");
+const target1 = document.querySelector(".ul_social_nav");
+const name = document.querySelector("#name");
 
-  burgerNav.addEventListener('click', () => {
-    if (!isWrapperVisible) {
-        wrapper.style.display = 'flex';
-        inWrapper.style.display = 'flex';      
-        container.style.marginTop = '20vh'; 
-        
-        setTimeout(() => {
-          wrapper.style.top = '0';
-          inWrapper.style.top = '0';
-        }, 50); // Delay for opacity transition
+let isWrapperVisible = false;
 
-        setTimeout(() => {
-          container.style.filter = 'blur(10px)';
-        }, 300); // Delay for opacity transition
-        
-        setTimeout(() => {
-          target.classList.add("visible");
-        }, 500);
-        setTimeout(()=>{
-          target1.classList.add("visible");
-        },800)
-        setTimeout(()=>{
-          target1.style.overflow = 'unset';
-        },1000)
+burgerNav.addEventListener("click", () => {
+  isWrapperVisible = !isWrapperVisible;
 
-    } else {
-      
-        setTimeout(() => {
-          target.classList.remove("visible");
-          target1.classList.remove("visible");
-          target1.style.overflow = 'hidden';
-        }, 50);
+  if (isWrapperVisible) {
+    openMenu();
+  } else {
+    closeMenu();
+  }
+});
 
-        setTimeout(()=>{
-          wrapper.style.top = '-70vh';
-          inWrapper.style.top = '-60vh';
-          container.style.marginTop = '0px'; 
-        },600)
-       
-        setTimeout(() => {
-          wrapper.style.display = 'none';
-          inWrapper.style.display = 'none';
-          container.style.filter = 'blur(0)';
-        }, 1000); // Delay for display none after opacity transition
-    }
+function openMenu() {
+  wrapper.style.display = "flex";
+  inWrapper.style.display = "flex";
+  container.style.marginTop = "20vh";
 
-    isWrapperVisible = !isWrapperVisible;
+  // Change the name color
+  name.style.color = "#091318";
+
+  requestAnimationFrame(() => {
+    wrapper.style.top = "0";
+    inWrapper.style.top = "0";
   });
 
+  setTimeout(() => {
+    container.style.filter = "blur(10px)";
+  }, 300);
 
-  // burgerNav.classList.add("slide-in-blurred-right");
+  setTimeout(() => {
+    target.classList.add("visible");
+  }, 500);
 
-  document.addEventListener("DOMContentLoaded",()=>{
-     burgerNav.removeAttribute("style");
-      setTimeout(() => {
-            burgerNav.removeAttribute("style");
-      // burgerNav.classList.remove("slide-in-blurred-right");
-    }, 2000);
+  setTimeout(() => {
+    target1.classList.add("visible");
+  }, 800);
 
-  })
-  
+  setTimeout(() => {
+    target1.style.overflow = "unset";
+  }, 1000);
+}
 
+function closeMenu() {
+  target.classList.remove("visible");
+  target1.classList.remove("visible");
+  target1.style.overflow = "hidden";
 
+  setTimeout(() => {
+    wrapper.style.top = "-70vh";
+    inWrapper.style.top = "-60vh";
+    container.style.marginTop = "0";
+  }, 600);
 
-  function scrollToSection(sectionId) {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      const body = document.body;
-      const offsetTop = section.getBoundingClientRect().top + body.scrollTop;
-      const smoothScrollOptions = {
-        behavior: 'smooth',
-        block: 'start'
-      };
-      window.scrollTo({
-        top: offsetTop,
-        ...smoothScrollOptions
-      });
-    }
-  }
+  setTimeout(() => {
+    wrapper.style.display = "none";
+    inWrapper.style.display = "none";
+    container.style.filter = "blur(0)";
 
+    // Restore original color
+    name.style.color = "";
+  }, 1000);
+}
 
-  
+document.addEventListener("DOMContentLoaded", () => {
+  burgerNav.removeAttribute("style");
+
+  setTimeout(() => {
+    burgerNav.removeAttribute("style");
+  }, 2000);
+});

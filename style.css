@@ -160,6 +160,8 @@ h2 {
   top: 30px;
   right: 30px;
 
+  transition: scale 0.3s ease;
+
   /* -webkit-transform: scaleX(-1);
   transform: scaleX(-1); */
 
@@ -1396,8 +1398,8 @@ a:hover {
 }
 
 /* Cursor Style  */
-.cursor {
-  position: absolute;
+/* .cursor {
+  position: fixed;
   width: 1.8rem;
   height: 1.8rem;
   z-index: 100;
@@ -1407,8 +1409,48 @@ a:hover {
   transform: translate(-50%, -50%);
   pointer-events: none;
   mix-blend-mode: difference;
-  transition: transform 0.3s ease;
+} */
+
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 1.8rem;
+  height: 1.8rem;
+
+  background: #1fc2f0;
+  border: 2px solid #0f576b;
+  border-radius: 50%;
+
+  pointer-events: none;
+  mix-blend-mode: difference;
+
+  transform: translate(-50%, -50%);
+  will-change: transform;
+
+  z-index: 99999;
+
+  transition:
+    width 0.3s ease,
+    height 0.3s ease;
 }
+
+/* .cursor {
+  position: absolute;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+
+  background: rgba(31, 194, 240, .15);
+  border: 2px solid #1fc2f0;
+  backdrop-filter: blur(4px);
+
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform .18s ease;
+  z-index: 9999;
+} */
 
 .shine:hover~.cursor {
   width: 150px;
@@ -2111,6 +2153,7 @@ lord-icon {
     background: #fecf43;
   }*/
 
-/* html {
+/* html,
+body {
   cursor: none;
 } */

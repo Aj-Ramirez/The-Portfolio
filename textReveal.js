@@ -70,7 +70,7 @@ window.addEventListener("load", () => {
 
 // BLUR THE BORDERS IN IMAGES
 document.addEventListener("DOMContentLoaded", function () {
-  const faIcons = document.querySelectorAll(".fa");
+  const faIcons = document.querySelectorAll(".fa, .role");
 
   faIcons.forEach((faIcon) => {
     faIcon.addEventListener("mouseover", () => {
