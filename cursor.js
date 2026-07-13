@@ -215,15 +215,20 @@ gsap.ticker.add(() => {
     Math.abs(cursorState.scrollScaleY - 1) > 0.01;
 
   gsap.set(mouseCursor, {
-    left: cursor.x,
-    top: cursor.y,
+  left: cursor.x,
+  top: cursor.y,
 
-    rotation: isScrolling
-      ? cursorState.scrollRotation
-      : angle,
+  xPercent: -50,
+  yPercent: -50,
 
-    scaleX: finalScaleX,
-    scaleY: finalScaleY,
+  rotation: isScrolling
+    ? cursorState.scrollRotation
+    : angle,
+
+  scaleX: finalScaleX,
+  scaleY: finalScaleY,
+
+  transformOrigin: "50% 50%"
   });
 
   previous.x = cursor.x;

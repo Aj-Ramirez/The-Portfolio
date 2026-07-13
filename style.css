@@ -1427,6 +1427,7 @@ a:hover {
   mix-blend-mode: difference;
 
   transform: translate(-50%, -50%);
+  transform-origin: center center;
   will-change: transform;
 
   z-index: 99999;
