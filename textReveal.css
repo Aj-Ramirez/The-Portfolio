@@ -184,3 +184,13 @@
     width .1s ease,
     height .1s ease;
 }
+
+.shine2Div {
+  max-width: 900px;
+  padding: 20% 0;
+}
+
+.shine2 {
+  font-size: 2rem;
+  max-width: 90%;
+}

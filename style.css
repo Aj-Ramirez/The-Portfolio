@@ -1426,7 +1426,7 @@ a:hover {
   pointer-events: none;
   mix-blend-mode: difference;
 
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
   transform-origin: center center;
   will-change: transform;
 
@@ -1616,7 +1616,7 @@ a:hover {
 }
 
 #about-title {
-  font-size: 12rem;
+  font-size: 10rem;
   font-weight: 900;
   font-family: 'Montserrat', sans-serif !important;
   /* text-transform: uppercase; */
