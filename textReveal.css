@@ -121,35 +121,40 @@
 .shine2 {
   position: relative;
   display: block;
-
   margin: 50px;
-
   color: #1fc2f0;
-
   font-weight: 800;
   font-size: 50px;
   line-height: 110%;
-
   text-align: center;
 }
 
 .shine2 span {
   position: absolute;
   inset: 0;
-
   z-index: 100;
-
   /* KEEP YOUR COLOR */
   background-color: #091318;
   /* or use #091318 if that's what you want */
-
   opacity: 0;
-
   clip-path: circle(0px at 0 0);
-
   will-change: clip-path;
-
   pointer-events: none;
+}
+
+.cursorHoverShine2 {
+  width: 300px;
+  height: 300px;
+}
+
+.shine2Div {
+  max-width: 900px;
+  padding: 20% 0;
+}
+
+.shine2 {
+  font-size: 2rem;
+  max-width: 90%;
 }
 
 
@@ -183,14 +188,4 @@
   transition:
     width .1s ease,
     height .1s ease;
-}
-
-.shine2Div {
-  max-width: 900px;
-  padding: 20% 0;
-}
-
-.shine2 {
-  font-size: 2rem;
-  max-width: 90%;
 }

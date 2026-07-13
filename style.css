@@ -1639,13 +1639,13 @@ a:hover {
   /* background: red; */
 }
 
-#web-design-box {
+.web-design-box {
   height: 90vh;
   width: 170px;
   transition: all 0.4s ease;
 }
 
-#web-design-box:hover {
+.web-design-box:hover {
   height: 90vh;
   width: 250px;
 }

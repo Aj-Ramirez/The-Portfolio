@@ -203,3 +203,4 @@ document.querySelectorAll(".card, .blurb").forEach((card) => {
 // window.addEventListener("DOMContentLoaded", ()=>{
 //   window.location.href = window.location.pathname + "?v=" + Date.now();
 // })
+

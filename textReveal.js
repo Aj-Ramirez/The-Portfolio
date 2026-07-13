@@ -64,7 +64,7 @@ class Shine {
 window.addEventListener("load", () => {
   const shine1 = new Shine(".shine", ".cursor", "cursorHover");
   const shine2 = new Shine(".mstrRevealText", ".cursor", "cursorMstrHover");
-  const shine3 = new Shine(".shine2", ".cursor", "cursorHover");
+  const shine3 = new Shine(".shine2", ".cursor", "cursorHoverShine2");
 });
 
 
