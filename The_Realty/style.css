@@ -3,7 +3,7 @@
 ================================ */
 @font-face {
      font-family: "Didot";
-     src: url("font/Didot.otf") format("opentype");
+     src: url("font/Didot.otf") format("opentype"); /* test from d to D*/
      font-weight: 400;
      font-style: normal;
      font-display: swap;
