@@ -25,6 +25,11 @@
   margin: 0;
 }
 
+html,
+body {
+  cursor: none;
+}
+
 body {
   font-family: termina, sans-serif;
   color: var(--text-color);
@@ -2153,8 +2158,3 @@ lord-icon {
   .blurb4:hover{
     background: #fecf43;
   }*/
-
-/* html,
-body {
-  cursor: none;
-} */

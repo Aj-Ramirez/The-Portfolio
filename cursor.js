@@ -235,4 +235,3 @@ gsap.ticker.add(() => {
   previous.y = cursor.y;
 });
 
-

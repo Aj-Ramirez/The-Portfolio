@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>The Realty</title>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Questrial&display=swap" rel="stylesheet">
+
+        <!-- Remix Icon -->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+
+    <body>
+
+        <section id="intro-loader">
+            <div class="grain"></div>
+            <div class="fog"></div>
+            <div class="loader-content">
+                <div class="brand">
+                    The Realty
+                </div>
+                <div class="line"></div>
+                <p class="eyebrow">
+                    LET'S EMBRACE THE ESSENCE
+                </p>
+                <h1>
+                    Natural Way Of Living
+                </h1>
+            </div>
+        </section>
+
+        <header class="header">
+
+                <a href="#" class="logo">
+                    The Realty
+                </a>
+
+                <nav class="nav">
+
+                    <a href="#home" class="active">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#properties">Properties</a>
+                    <a href="#experts">Experts</a>
+                    <a href="#contact">Contact</a>
+
+                </nav>
+
+                <button class="menu-btn">
+                    <i class="ri-menu-line"></i>
+                </button>
+
+        </header>
+
+        <section class="hero">
+
+            <!-- <img src="https://c.animaapp.com/glbbC3Xu/img/bg.png" id="heroBackground" class="hero-bg" alt=""> -->
+            <img src="images/hero-bg.jpg" loading="lazy" id="heroBackground" class="hero-bg" alt="">
+            <div class="hero__overlay" aria-hidden="true"></div>
+            <!-- <div class="overlay"></div> -->
+
+            <div class="hero-content">
+                <span class="subtitle">LET'S EMBRACE THE ESSENCE</span>
+                <h1> Natural Way <br> Of Living </h1>
+                <p>Change the way you live life, closer to nature</p>
+                <a href="#" class="btn">
+                    <!-- <i class="ri-article-line"></i> -->
+                    <i class="fa-solid fa-file-invoice"></i>
+                    Get a Quote
+                </a>
+            </div>
+
+            <!-- <div class="hero-slider">
+                <div class="item">
+                    <span>01</span>
+                    <div><img src="images/divider.png" alt="divider"></div>
+                    <div>
+                        <small>A LUXURIOUS RETREAT</small>
+                        <h3>The Opulent Haven</h3>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <span>02</span>
+                    <div><img src="images/divider.png" alt="divider"></div>
+                    <div>
+                        <small>A PALATIAL RETREAT</small>
+                        <h3>The Exquisite Oasis</h3>    
+                    </div>
+                </div>
+
+                <div class="item active">
+                    <span>03</span>
+                    <div><img src="images/divider.png" alt="divider"></div>
+                    <div>
+                        <small>AN ENCHANTING DREAMSCAPE</small>
+                        <h3>The Elite Sanctuary</h3>
+                    </div>
+                </div>
+            </div> -->
+            <div class="hero-slider">
+
+                <div class="item active" data-image="images/opulent-bg.jpg">
+
+                    <span>01</span>
+                    <div><img src="images/divider.png" loading="lazy" alt="divider"></div>
+
+                    <div>
+                        <small>A LUXURIOUS RETREAT</small>
+                        <h3>The Opulent Haven</h3>
+                    </div>
+
+                </div>
+
+                <div class="item" data-image="images/exquisite-bg.jpg">
+
+                    <span>02</span>
+                    <div><img src="images/divider.png" loading="lazy" alt="divider"></div>
+
+                    <div>
+                        <small>A PALATIAL RETREAT</small>
+                        <h3>The Exquisite Oasis</h3>
+                    </div>
+
+                </div>
+
+                <div class="item" data-image="images/elite-bg.jpg">
+
+                    <span>03</span>
+                    <div><img src="images/divider.png" loading="lazy" alt="divider"></div>
+
+                    <div>
+                        <small>AN ENCHANTING DREAMSCAPE</small>
+                        <h3>The Elite Sanctuary</h3>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="scroll-indicator">
+                <span class="active"></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </section>
+
+        <section class="about-gallery" id="about">
+
+            <div class="about-content">
+                <h2>Welcome to The Realty</h2>
+                <span class="section-kicker">YOUR TRUSTED PARTNER IN PROPERTY DREAMS!</span>
+                <p>
+                    We believe that finding your dream home or making a lucrative investment should be an exciting and seamless experience. With a passion for real estate and a dedication to excellence, our team of professionals is committed to guiding you through every step of the journey.
+                </p>
+                <p>
+                    We are a dynamic and driven group of real estate experts, united by a common goal - to make your real estate dreams a reality. Our team comprises experienced agents, savvy negotiators, and skilled market analysts, all with a deep understanding of the local property landscape.
+                </p>
+
+                <div class="stats">
+                    <div class="stat-item">
+                        <i class="ri-shield-check-line"></i>
+                        <span>100%</span>
+                        <small>PROTECTED</small>
+                    </div>
+
+                    <div class="stat-item">
+                        <i class="ri-group-line"></i>
+                        <span>123,456+</span>
+                        <small>SATISFIED CLIENT</small>
+                    </div>
+
+                    <div class="stat-item">
+                        <i class="ri-building-line"></i>
+                        <span>123,456+</span>
+                        <small>PROPERTIES</small>
+                    </div>
+
+                    <div class="stat-item">
+                        <i class="ri-team-line"></i>
+                        <span>123,456+</span>
+                        <small>PARTNERSHIP</small>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="properties" class="property-showcase">
+
+            <article class="property-panel">
+                <img src="images/house-vert-1.jpg" loading="lazy" alt="Modern luxury retreat" />
+
+                <div class="property-content">
+                    <span class="property-number">01</span>
+                    <span class="property-line"></span>
+                    <p class="property-subtitle">A LUXURIOUS RETREAT</p>
+                    <h2 class="property-title">The Opulent Haven</h2>
+                </div>
+            </article>
+
+            <article class="property-panel">
+                <img src="images/house-vert-2.jpg" loading="lazy" alt="Modern palatial retreat" />
+
+                <div class="property-content">
+                    <span class="property-number">02</span>
+                    <span class="property-line"></span>
+                    <p class="property-subtitle">A PALATIAL RETREAT</p>
+                    <h2 class="property-title">The Exquisite Oasis</h2>
+                </div>
+            </article>
+
+            <article class="property-panel">
+                <img src="images/house-vert-3.jpg" loading="lazy" alt="Elite sanctuary" />
+
+                <div class="property-content">
+                    <span class="property-number">03</span>
+                    <span class="property-line"></span>
+                    <p class="property-subtitle">AN ENCHANTING DREAMSCAPE</p>
+                    <h2 class="property-title">The Elite Sanctuary</h2>
+                </div>
+            </article>
+
+            <article class="property-panel">
+                <img src="images/house-vert-4.jpg" loading="lazy" alt="Modern serene residence" />
+
+                <div class="property-content">
+                    <span class="property-number">04</span>
+                    <span class="property-line"></span>
+                    <p class="property-subtitle">A MODERN ESCAPE</p>
+                    <h2 class="property-title">The Serene Residence</h2>
+                </div>
+            </article>
+
+        </section>
+
+        <section id="experts" class="team-section">
+            <div class="team-header">
+                <h2>Our Team Experts</h2>
+                <p>
+                At The Realty, we're a group with top dealer from building, interior,
+                design etc. to help consult & buy your dream become perfect
+                </p>
+            </div>
+
+            <div class="team-grid">
+                <article class="team-card">
+                <div class="team-image">
+                    <img src="images/expert-1.png" loading="lazy" alt="Johnathan Myers" />
+                    <div class="team-overlay">
+                    <p>8+ years helping clients find luxury homes and private retreats.</p>
+                    <a href="#">View Profile</a>
+                    </div>
+                </div>
+
+                <h3>Johnathan Myers</h3>
+                <span>Senior Real Estate Agent</span>
+                </article>
+
+                <article class="team-card">
+                <div class="team-image">
+                    <img src="images/expert-2.png" loading="lazy" alt="Sarah Johnson" />
+                    <div class="team-overlay">
+                    <p>Specializes in pricing trends, market insights, and investment timing.</p>
+                    <a href="#">View Profile</a>
+                    </div>
+                </div>
+
+                <h3>Sarah Johnson</h3>
+                <span>Property Market Analyst</span>
+                </article>
+
+                <article class="team-card">
+                <div class="team-image">
+                    <img src="images/expert-3.png" loading="lazy" alt="Michael Turner" />
+                    <div class="team-overlay">
+                    <p>Focused on modern villas, premium locations, and buyer matching.</p>
+                    <a href="#">View Profile</a>
+                    </div>
+                </div>
+
+                <h3>Michael Turner</h3>
+                <span>Property Specialist</span>
+                </article>
+
+                <article class="team-card">
+                <div class="team-image">
+                    <img src="images/expert-4.png" loading="lazy" alt="Emily Myers" />
+                    <div class="team-overlay">
+                    <p>Guides clients through lifestyle-focused property decisions.</p>
+                    <a href="#">View Profile</a>
+                    </div>
+                </div>
+
+                <h3>Emily Myers</h3>
+                <span>Real Estate Advisor</span>
+                </article>
+
+                <article class="team-card">
+                <div class="team-image">
+                    <img src="images/expert-5.png" loading="lazy" alt="David Lee" />
+                    <div class="team-overlay">
+                    <p>Helps investors evaluate long-term property value and growth.</p>
+                    <a href="#">View Profile</a>
+                    </div>
+                </div>
+
+                <h3>David Lee</h3>
+                <span>Investment Strategist</span>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="contact-bg"></div>
+            <div class="contact-overlay"></div>
+            
+            <div class="contact-property">
+                <span class="property-number">01</span>
+
+                <span class="property-divider"></span>
+                <div><img src="images/divider.png" loading="lazy" alt="divider"></div>
+                <div class="property-info">
+                    <small>A LUXURIOUS RETREAT</small>
+                    <h3>The Opulent Haven</h3>
+                </div>
+            </div>
+
+            <div class="contact-panel">
+                <div class="contact-top">
+                <h2>Contact Us</h2>
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi.
+                    Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla,
+                    mattis ligula consectetur, ultrices.
+                </p>
+                </div>
+
+                <div class="contact-bottom">
+                <div class="visit-box">
+                    <h3>Visit Us</h3>
+
+                    <p class="company">The Realty</p>
+
+                    <p>
+                    Monday - Friday <br />
+                    8:00 am - 3:00 pm EST
+                    </p>
+
+                    <p>
+                    224 Hight St. Avenue, Suite 801, <br />
+                    Honolulu, HI 96315
+                    </p>
+
+                    <p>
+                    Phone: 1-880-464-1234 <br />
+                    Email: info@test.therealty.com
+                    </p>
+
+                    <div class="socials">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="Threads"><i class="fa-brands fa-threads"></i></a>
+                    </div>
+                </div>
+
+                <form class="message-box">
+                    <h3>Message Us</h3>
+
+                    <label>
+                    Name:
+                    <input type="text" />
+                    </label>
+
+                    <label>
+                    Phone:
+                    <input type="tel" />
+                    </label>
+
+                    <label>
+                    Message:
+                    <textarea></textarea>
+                    </label>
+
+                    <button type="submit">Submit</button>
+                </form>
+                </div>
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <div class="footer-shapes" aria-hidden="true">
+                <img src="images/footer-logo.png" loading="lazy" alt="footer-logo">
+            </div>
+
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <h2>The Realty</h2>
+                    <p>Your Trusted Company</p>
+                </div>
+
+                <div class="footer-info">
+                    <p class="footer-label">Real Estate Company</p>
+
+                    <div>
+                        <p class="footer-label">General Inquiries</p>
+                        <a href="mailto:inquiries@test.therealty.com">
+                        inquiries@test.therealty.com
+                        </a>
+                    </div>
+
+                    <p class="copyright">© 2026</p>
+                </div>
+
+                <div class="footer-contact">
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="Threads"><i class="fa-brands fa-threads"></i></a>
+                    </div>
+
+                    <div class="phone-box">
+                        <p class="footer-label">Phone</p>
+                        <a href="tel:18804641234">1-880-464-1234</a>
+                    </div>
+
+                    <button class="back-to-top" type="button" aria-label="Back to top">
+                        ↑
+                    </button>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            document.querySelector(".back-to-top").addEventListener("click", function () {
+                window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+                });
+            });
+
+            /*Sticky Header*/
+            const header = document.querySelector(".header");
+                window.addEventListener("scroll",()=>{
+                    if(window.scrollY > 50){
+                        header.classList.add("scrolled");
+                    }else{
+                        header.classList.remove("scrolled");
+                    }
+                });
+
+
+            /*Mobile Menu*/
+            const menuBtn = document.querySelector(".menu-btn");
+            const nav = document.querySelector(".nav");
+            const navLinks = document.querySelectorAll(".nav a");
+
+                menuBtn.addEventListener("click", () => {
+                    nav.classList.toggle("active");
+                });
+
+                navLinks.forEach(link => {
+                    link.addEventListener("click", () => {
+                        nav.classList.remove("active");
+                    });
+                });
+
+            // Change Hero-Background
+            const heroBg = document.getElementById("heroBackground");
+            const defaultImage = "images/hero-bg.jpg";
+            const sliderItems = document.querySelectorAll(".hero-slider .item");
+            const dots = document.querySelectorAll(".scroll-indicator span");
+                sliderItems.forEach((item, index) => {
+                    item.addEventListener("mouseenter" || "click", () => {
+                        heroBg.classList.add("change");
+                        setTimeout(() => {
+                            heroBg.src = item.dataset.image;
+                            heroBg.classList.remove("change");
+                        }, 250);
+                        sliderItems.forEach(card => card.classList.remove("active"));
+                        dots.forEach(dot => dot.classList.remove("active"));
+                        item.classList.add("active");
+                        dots[index].classList.add("active");
+                    });
+                });
+
+            const heroSlider = document.querySelector(".hero-slider");
+                heroSlider.addEventListener("mouseleave", () => {
+                    heroBg.classList.add("change");
+                    setTimeout(() => {
+                        heroBg.src = defaultImage;
+                        heroBg.classList.remove("change");
+                    },250);
+                    sliderItems.forEach(card => card.classList.remove("active"));
+                    dots.forEach(dot => dot.classList.remove("active"));
+                    // Balik sa first card
+                    sliderItems[0].classList.add("active");
+                    dots[0].classList.add("active");
+                });
+        </script>
+
+        <script src="https://unpkg.com/lenis@1.3.14/dist/lenis.min.js"></script>
+        <script>
+            const lenis = new Lenis({
+                duration: 1.8,
+                easing: (t) => 1 - Math.pow(1 - t, 4),
+                smoothWheel: true,
+                wheelMultiplier: 0.7,
+                touchMultiplier: 1.2,
+            });
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+            requestAnimationFrame(raf);
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+        <script>
+            gsap.timeline({
+
+                defaults:{
+                    ease:"power2.out"
+                }
+
+            })
+
+            .fromTo(".brand",
+            {
+                y:20,
+                opacity:0
+            },
+            {
+                y:0,
+                opacity:1,
+                duration:1
+            })
+
+            .to(".line",
+            {
+                width:180,
+                duration:.8
+            },"-=.5")
+
+            .to(".eyebrow",
+            {
+                opacity:1,
+                y:0,
+                duration:.8
+            },"-=.4")
+
+            .to(".loader-content h1",
+            {
+                opacity:1,
+                y:0,
+                duration:1.2
+            },"-=.4")
+
+            .to({},{
+                duration:.9
+            })
+
+            .to("#intro-loader",{
+
+                opacity:0,
+
+                duration:1.2,
+
+                ease:"power2.inOut",
+
+                onComplete:()=>{
+
+                    document.getElementById("intro-loader").remove();
+
+                }
+
+            });
+        </script>
+    </body>
+</html>
