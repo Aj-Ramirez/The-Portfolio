@@ -2158,3 +2158,262 @@ lord-icon {
   .blurb4:hover{
     background: #fecf43;
   }*/
+
+
+  /* Figma design peg */
+  .selected{
+    position:relative;
+    display:inline-block;
+    padding:5px 10px;
+    color:white;
+    /* font-size:42px; */
+    outline:2px solid #0d99ff;
+}
+
+/* Top Left */
+.selected::before{
+    content:"";
+    position:absolute;
+    width:8px;
+    height:8px;
+    background:#fff;
+    border:2px solid #0d99ff;
+    top:-6px;
+    left:-6px;
+}
+
+/* Bottom Right */
+.selected::after{
+    content:"";
+    position:absolute;
+    width:8px;
+    height:8px;
+    background:#fff;
+    border:2px solid #0d99ff;
+    bottom:-6px;
+    right:-6px;
+}
+
+/* Top Right */
+.selected .tr{
+    position:absolute;
+    width:12px;
+    height:12px;
+    background:#fff;
+    border:2px solid #0d99ff;
+    top:-6px;
+    right:-6px;
+}
+
+/* Bottom Left */
+.selected .bl{
+    position:absolute;
+    width:12px;
+    height:12px;
+    background:#fff;
+    border:2px solid #0d99ff;
+    bottom:-6px;
+    left:-6px;
+}
+
+.selected {
+    position: relative;
+    display: inline-block;
+}
+
+/* Hide the selection */
+.selected::before,
+.selected::after,
+.selected .tr,
+.selected .bl {
+    opacity: 0;
+    transition: opacity .2s ease;
+}
+
+/* Show on hover */
+#heading2:hover::before,
+#heading2:hover::after,
+#heading2:hover .tr,
+#heading2:hover .bl {
+    opacity: 1;
+}
+
+.selected{
+    outline: 2px solid transparent;
+    transition: outline-color .2s ease;
+}
+    
+#heading2:hover{
+    outline-color: #0d99ff;
+}
+
+.selected::before{
+    transform:translate(3px,3px);
+}
+
+.selected::after{
+    transform:translate(-9px,-9px);
+}
+
+.selected .tr{
+    transform:translate(-9px,9px);
+}
+
+.selected .bl{
+    transform:translate(9px,-9px);
+}
+
+.selected::before,
+.selected::after,
+.selected .tr,
+.selected .bl{
+    opacity:0;
+    transition:
+        transform .25s ease,
+        opacity .25s ease;
+}
+
+.selected:hover::before,
+.selected:hover::after,
+.selected:hover .tr,
+.selected:hover .bl{
+    opacity:1;
+    transform:translate(0,0);
+}
+
+
+
+/* Coding of Designer */
+/* ===========================
+   VS Code Selected Text
+=========================== */
+
+.typing{
+    position:relative;
+
+    background:#2d5f94;
+    color:#fff;
+
+    border-radius:4px;
+
+    padding:.08em .18em;
+
+    transition:
+        background .25s ease,
+        color .25s ease;
+}
+
+/* Caret */
+
+.typing::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:8px;
+    top:50%;
+
+    width:2px;
+    height:55%;
+
+    background:#1796cd;
+
+    transform:translateY(-50%);
+
+    animation:blinkCaret 1.3s steps(1) infinite;
+}
+
+/* Small VS Code selection dots */
+
+.typing::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:6px;
+    top:50%;
+
+    width:6px;
+    height:6px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.15);
+
+    transform:translateY(-50%);
+}
+
+@keyframes blinkCaret{
+
+    50%{
+        opacity:0;
+    }
+
+}
+
+
+
+/* Coding {} for frontend */
+.code-title{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.code-title::before,
+.code-title::after{
+    content:"";
+    font-family:"JetBrains Mono", monospace;
+
+    color:#1795cb;
+    text-shadow:0 0 8px rgba(59, 213, 255, 0.25);
+
+    opacity:0;
+    transform: translateY(5px) scale(.8);
+    transition:
+        opacity .35s ease,
+        transform .35s ease,
+        color .3s ease;
+}
+/* left to right */
+.code-title::before{
+    transform: translateX(-30px) translateY(5px) scale(.8);
+}
+
+.code-title:hover::before{
+    transform: translateX(0) translateY(0) scale(1);
+}
+/* right to left */
+.code-title::after{
+    transform: translateX(30px) translateY(5px) scale(.8);
+}
+
+.code-title:hover::after{
+    transform: translateX(0) translateY(0) scale(1);
+}
+
+.code-title::before{
+    content:"{";
+    margin-right:.08em;
+}
+
+.code-title::after{
+    content:"}";
+    margin-left:.08em;
+}
+
+/* ===========================
+   Show only on hover
+=========================== */
+
+.code-title:hover::before,
+.code-title:hover::after{
+    opacity:1;
+    transform:translateY(0) scale(1);
+    color:#1795cb;
+}
+
+
+

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/x-icon" href="./images/favicon.svg">
 
-  <title>klixt.dev</title>
+  <title>ajramirez.dev</title>
 
   <!-- FONT__AWESOME -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -99,7 +99,7 @@
     <span>
       <a href="/">
         <lord-icon src="https://cdn.lordicon.com/rwotyanb.json" trigger="morph"
-          colors="primary:#21374d,secondary:#1fc2f0" stroke="80" style="width:80px;height:80px">
+          colors="primary:#21374d,secondary:#1fc2f0" stroke="80" style="width:60px;height:60px">
         </lord-icon>
       </a>
     </span>ajramirez<span class="dot">.</span>
@@ -111,17 +111,36 @@
       data-scroll-direction="vertical" data-scroll-speed="2.5">
       <div class="heroHeadings" style="text-align: center;">
         <h1 id="heading1" data-scroll data-scroll-direction="vertical" data-scroll-speed="-0.5">
-          <div class="tracking-in-contract-bck-top">
-            <span id="front" onmouseover="changeTextDev('mobile')"
-              onmouseout="changeTextDev('developer')">front</span><span id="end" onmouseover="changeTextDev('web')"
-              onmouseout="changeTextDev('developer')">end</span>
+          <div class="tracking-in-contract-bck-top code-title">
+            <span id="front" 
+                  onmouseover="changeTextDev('mobile')"
+                  onmouseout="changeTextDev('developer')">
+                  front
+            </span>
+            <span id="end" 
+                  onmouseover="changeTextDev('website')"
+                  onmouseout="changeTextDev('developer')">
+                  end
+            </span>
           </div>
-        </h1>
-        <h1 id="heading2" data-scroll data-scroll-direction="vertical" data-scroll-speed="0.5">
+      
+        <span id="heading2" class="selected" data-scroll data-scroll-direction="vertical" data-scroll-speed="0.5">
           <div class="tracking-in-contract-bck-bottom">
-            <span id="dev" onmouseover="changeTextDev('designer'); changeTextFront('ui &'); changeTextEnd(' ux')"
-              onmouseout="changeTextDev('developer'); changeTextFront('front'); changeTextEnd('end')">developer</span>
+            <span id="dev" 
+                  onmouseover="this.classList.add('typing'); 
+                  changeTextDev('designer'); 
+                  changeTextFront('ui &'); 
+                  changeTextEnd(' &nbsp;ux')"
+                  onmouseout="this.classList.remove('typing'); 
+                  changeTextDev('developer'); 
+                  changeTextFront('front'); 
+                  changeTextEnd('end')">
+                  developer
+            </span>
           </div>
+          <span class="tr"></span>
+          <span class="bl"></span>
+        </span>
         </h1>
       </div>
       <br><br><br>
@@ -161,7 +180,7 @@
 
 
 
-    <div class="introduction-text">
+    <div class="introduction-text" data-textcolor="#fff">
       <section class="slide_Collections_Wrapper" data-bgcolor="#091318">
         <div class="collection_Preview" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-10">
           <img src="./images/Breadily.jpg" alt="Breadily Web Design">
@@ -196,7 +215,7 @@
       </div>
     </div>
 
-    <div class="iconnection" data-textcolor="#1fc2f0" data-bgcolor="#091318">
+    <div class="iconnection" data-textcolor="#fff" data-bgcolor="#091318">
       <div class="iconnection-left" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-12">
         <img id="icon-left" src="./images/favicon.svg" />
       </div>
