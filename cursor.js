@@ -235,3 +235,80 @@ gsap.ticker.add(() => {
   previous.y = cursor.y;
 });
 
+const cursoreye = document.querySelector(".cursor");
+
+let idleTimer;
+let blinkTimer;
+let speechTimer;
+
+function showEyes(){
+
+    cursoreye.classList.add("idle");
+
+    scheduleBlink();
+    console.log("Show eyes")
+}
+
+function hideEyes(){
+
+    cursoreye.classList.remove("idle");
+    cursoreye.classList.remove("blink");
+
+    clearTimeout(blinkTimer);
+
+}
+
+const messages = [
+    "Explore more!",
+    "Hover me 👀",
+    "Nice choice.",
+    "Keep scrolling.",
+    "There's more ↓",
+    "Take a look.",
+    "Awesome!",
+    "Find something cool 😎",
+    "Are you bored? 🥺",
+    "Still there?"
+];
+
+const speech = document.querySelector(".speech");
+
+function randomMessage(){
+
+    speech.textContent =
+        messages[Math.floor(Math.random()*messages.length)];
+
+}
+
+function scheduleBlink(){
+
+    clearTimeout(blinkTimer);
+
+    blinkTimer = setTimeout(()=>{
+
+        cursoreye.classList.add("blink");
+
+        setTimeout(()=>{
+
+            cursoreye.classList.remove("blink");
+
+        },180);
+
+    },2500);
+
+}
+
+window.addEventListener("mousemove",()=>{
+
+    hideEyes();
+
+    clearTimeout(idleTimer);
+
+    idleTimer = setTimeout(()=>{
+
+        randomMessage();
+        showEyes();
+
+    },3500);
+
+});
