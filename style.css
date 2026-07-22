@@ -329,9 +329,30 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: flex-start;
-  padding: 30px;
+  align-items: center;
+  padding: 150px;
   color: white;
+}
+.nav_wrapper #btm-nav{
+  color: #8b949a;
+}
+/* Huge logo image */
+#btm-nav::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -35px;          /* controls how much is cropped */
+    transform: translateX(-50%);
+
+    width: min(1700px, 120vw);
+    height: 340px;
+
+    background: url("./images/ajramirez.png") center bottom / contain no-repeat;
+
+    pointer-events: none;
+    z-index: 1;
+
+    opacity: .22;            /* subtle like the mockup */
 }
 
 .in_nav_wrapper {
@@ -1605,7 +1626,7 @@ a:hover {
 
 #introducing {
   z-index: 95;
-  font-size: 15rem;
+  font-size: 10rem;
   font-weight: 800;
   font-family: 'Montserrat', sans-serif !important;
   line-height: 80%;
@@ -1615,7 +1636,7 @@ a:hover {
 
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   height: 65vh;
   white-space: nowrap;
 }
@@ -2581,4 +2602,46 @@ Speech Bubble
         transform:translateX(-50%) translateY(0) scale(1);
     }
 
+}
+
+
+
+
+.how-do-i-work-blurbs {
+    display: flex;
+    height: 50dvh;
+    padding: 30px 10px;
+    gap: 50px;
+   width: 90dvw;
+}
+.how-do-i-work-blurb {
+   height: 50dvh;
+   width: 100vw;
+   justify-content: center;
+/*    background: red */
+   gap: 50px;
+}
+
+.how-do-i-work .grid1 #about-me-text {
+  width: fit-content;
+  margin: 0 auto;
+  text-align: center;
+}
+.how-do-i-work-blurbs .grid2, .how-do-i-work-blurbs .grid3, .how-do-i-work-blurbs .grid4, .how-do-i-work-blurbs .grid5{
+   width: 400px;
+}
+
+
+
+.how-do-i-work-blurbs-2 {
+    display: flex;
+    height: 50dvh;
+    padding: 30px 10px;
+    gap: 50px;
+      width: 90dvw;
+   justify-content: center;
+}
+
+.how-do-i-work-blurbs-2 .grid2, .how-do-i-work-blurbs-2 .grid3, .how-do-i-work-blurbs-2 .grid4, .how-do-i-work-blurbs-2 .grid5{
+   width: 400px;
 }

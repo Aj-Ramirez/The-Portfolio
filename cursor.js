@@ -268,7 +268,8 @@ const messages = [
     "Awesome!",
     "Find something cool 😎",
     "Are you bored? 🥺",
-    "Still there?"
+    "Still there?",
+    "Keep moving"
 ];
 
 const speech = document.querySelector(".speech");
