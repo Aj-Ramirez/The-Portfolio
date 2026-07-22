@@ -341,18 +341,14 @@ h2 {
     content: "";
     position: absolute;
     left: 50%;
-    bottom: -35px;          /* controls how much is cropped */
+    bottom: 0px;          /* controls how much is cropped */
     transform: translateX(-50%);
-
-    width: min(1700px, 120vw);
+    width: min(1525px, 120vw);
     height: 340px;
-
     background: url("./images/ajramirez.png") center bottom / contain no-repeat;
-
     pointer-events: none;
     z-index: 1;
-
-    opacity: .22;            /* subtle like the mockup */
+    opacity: .22;          
 }
 
 .in_nav_wrapper {
