@@ -439,6 +439,149 @@ Scrolled
 
 }
 
+
+/*==================================
+
+MENU BUTTON
+
+==================================*/
+
+.menu-btn{
+
+    display:none;
+
+    width:54px;
+    height:54px;
+
+    border:none;
+
+    background:transparent;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    font-size:1.7rem;
+
+    transition:.4s;
+
+}
+
+.menu-btn:hover{
+
+    transform:rotate(90deg);
+
+}
+
+/*==================================
+
+TABLET
+
+==================================*/
+
+@media(max-width:992px){
+
+    .search-btn{
+
+        display:none;
+
+    }
+
+    .menu-btn{
+
+        display:flex;
+
+        justify-content:center;
+        align-items:center;
+
+    }
+
+    .hero-nav{
+
+        position:fixed;
+
+        top:0;
+        right:-150%;
+        margin-top: 100px;
+        width:100%;
+        height:80vh;
+
+        border-radius: 50px;
+        background:rgba(18,18,18,.94);
+
+        backdrop-filter:blur(20px);
+
+        -webkit-backdrop-filter:blur(20px);
+
+        display:flex;
+
+        flex-direction:column;
+
+        justify-content:center;
+
+        gap:40px;
+
+        transition:.5s cubic-bezier(.19,1,.22,1);
+
+        z-index:-1;
+
+        
+
+    }
+
+    .hero-nav.active{
+
+        right:0;
+
+    }
+
+    .hero-nav a{
+
+        font-size:1.2rem;
+
+        letter-spacing:.3em;
+
+    }
+
+    .hero-nav:hover a{
+
+        opacity:1;
+
+    }
+
+}
+
+/*==================================
+
+PHONE
+
+==================================*/
+
+@media(max-width:576px){
+
+    .hero-header{
+
+        padding:20px 24px;
+
+    }
+
+    .hero-header.scrolled{
+
+        width:92%;
+
+        padding:18px 24px;
+
+    }
+
+    .logo img{
+
+        width:58px;
+
+    }
+    
+
+}
+
 /* =====================================================
    CONTENT
 ===================================================== */
@@ -728,8 +871,9 @@ OUTLINE TEXT
     }
 
     .hero-nav a{
-        font-size:.75rem;
+        font-size:1rem;
         letter-spacing:.12em;
+        line-height: 50px;
     }
 
     .logo img{
@@ -787,7 +931,7 @@ OUTLINE TEXT
 
     .hero-nav{
 
-        display:none;
+        /* display:none; */
 
     }
 
